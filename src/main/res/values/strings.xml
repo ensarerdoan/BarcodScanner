@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Barkod Tarayici</string>
+    <string name="magazalar">Mağazalar</string>
+    <string name="kategoriler">Kategoriler</string>
+    <string name="markalar">Markalar</string>
+    <string name="barkod">BARKOD</string>
+    <string name="adet">ADET</string>
+    <string name="btn_tara">TARA</string>
+    <string name="btn_kaydet">Kaydet</string>
+    <string name="son_eklenen">SON EKLENEN</string>
+    <string name="stok">STOK</string>
+</resources>

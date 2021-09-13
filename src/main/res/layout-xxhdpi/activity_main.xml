@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <!-- <Button
+                android:id="@+id/btnFilter"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="btnFilter"
+                android:text="Filtre"
+                android:textSize="20sp" />-->
+
+            <Spinner
+                android:id="@+id/spinnerWarehouse"
+                android:contentDescription="@string/magazalar"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"/>
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:contentDescription="@string/kategoriler"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_below="@id/spinnerWarehouse"
+                android:layout_marginTop="20dp"/>
+            <Spinner
+                android:id="@+id/spinnerMarka"
+                android:contentDescription="@string/markalar"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_below="@+id/spinnerCategory"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/txtCode"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/spinnerMarka"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/barkod"
+                android:inputType="number"
+                android:maxEms="13"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+
+
+            <EditText
+                android:id="@+id/txtAdet"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/txtCode"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:hint="@string/adet"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutHead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtAdet"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp">
+
+                <Button
+                    android:id="@+id/btnOku"
+                    android:layout_width="130dp"
+                    android:layout_height="70dp"
+                    android:onClick="btnScanCode"
+                    android:text="OKU"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnKaydet"
+                    android:layout_width="130dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="btnSave"
+                    android:text="Kaydet"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rLayoutHead">
+
+                <TextView
+                    android:id="@+id/tViewSonEklenen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/son_eklenen"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tViewBarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/barkod"
+                    android:textSize="18sp"
+                    android:layout_below="@id/tViewSonEklenen"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="60dp"/>
+
+                <TextView
+                    android:id="@+id/tViewStok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tViewSonEklenen"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:text="@string/stok"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tViewAddBarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tViewBarcode"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="60dp"/>
+                <TextView
+                    android:id="@+id/tViewAddStok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tViewStok"
+                    android:textSize="18sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="60dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
